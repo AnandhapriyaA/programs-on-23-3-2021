@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+public class mains extends UserMainCode {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter number");
+		int number = scan.nextInt();
+		addNumbers(number);
+		scan.close();
+	}
+}
+public class UserMainCode {
+	static int addNumbers(int number) {
+		int sum = 0;
+		int temp = 0; 
+		for (int i = 1; i <= number; i++) {
+		temp = 0;
+		for (int j = 1; j <= i; j++) {
+		if (i % j == 0)
+		temp++;
+		}
+		if (temp != 2) {
+		sum = sum + i;
+		}
+		}
+		System.out.println(sum);
+		return sum;	
+		}
+}
+
+
